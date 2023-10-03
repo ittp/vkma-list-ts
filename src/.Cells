@@ -1,0 +1,17 @@
+<Cell
+            title="title"
+            extraSubtitle="footer"
+            subhead={"subhead"}
+            before={
+              <Button
+                mode={"secondary"}
+                shape="RichCell"
+                before={"Before"}
+                title={"title"}
+              ></Button>
+            }
+            after={"after"}
+            target="cell"
+          >
+            <Header>Cell</Header>
+          </Cell>

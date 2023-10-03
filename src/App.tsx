@@ -19,11 +19,42 @@ import {
   RichCell,
 } from "@vkontakte/vkui";
 
-import { Axios, AxiosHeaders, AxiosProxyConfig } from "axios";
-import { useEffect, useReducer, useState } from "react";
+import { Axios, AxiosHeaders, AxiosInstance, AxiosProxyConfig } from "axios";
+import {
+  useEffect,
+  Component,
+  cloneElement,
+  useId,
+  useMemo,
+  useContext,
+  useReducer,
+  useState,
+  ReactNode,
+} from "react";
 type AppConfig = {};
 
 interface AppConfigInterface {}
+
+export class SomeComponent extends Component<{ value: any }> {
+  render(): ReactNode {
+    const value = this.props.value;
+
+    if (typeof value === "number") {
+      return value + 10; // number
+    }
+    if (typeof value === "boolean") {
+      return !value; // boolean
+    }
+    if (typeof value === "undefined") {
+      return value; // undefiened
+    }
+
+    if (value.data) {
+    }
+
+    return JSON.stringify(value); // string
+  }
+}
 
 export default function App(config: any) {
   let [store, setStore] = useState(config);
@@ -42,16 +73,7 @@ export default function App(config: any) {
         </ButtonGroup>
 
         <Group>
-          <Cell
-            title="title"
-            extraSubtitle="footer"
-            subhead={"subhead"}
-            before={<Button shape="RichCell">B</Button>}
-            after={"after"}
-            target="cell"
-          >
-            <Header>Cell</Header>
-          </Cell>
+          
           <SimpleCell
             after={<Icon16CommentOutline />}
             before={<Icon28DevicesOutline />}
