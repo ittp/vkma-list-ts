@@ -56,6 +56,13 @@ export class SomeComponent extends Component<{ value: any }> {
   }
 }
 
+function PageHeader() {
+  return (
+    <Header subtitle={"subtitle0"} mode={"secondary"}>
+      Title
+    </Header>
+  );
+}
 export default function App(config: any) {
   let [store, setStore] = useState(config);
 
@@ -64,29 +71,10 @@ export default function App(config: any) {
   // useEffect()
 
   return (
-    <View activePanel="profile">
-      <Panel id="profile">
-        <PanelHeader>List</PanelHeader>
-
-        <ButtonGroup>
-          <CellButton mode="primary">B</CellButton>
-        </ButtonGroup>
-
-        <Group>
-          
-          <SimpleCell
-            after={<Icon16CommentOutline />}
-            before={<Icon28DevicesOutline />}
-            expandable
-            title="title"
-            extraSubtitle={"проспект Ветеранов, 36 корпус 2"}
-          >
-            <Group>
-              <Header subtitle={"KN-1111"}>Runner</Header>
-            </Group>
-          </SimpleCell>
-          <SimpleCell>проспект Ветеранов, 166</SimpleCell>
-        </Group>
+    <View activePanel="profile" title={"s"}>
+      <Panel id="profile" header={<PageHeader />}>
+        <div>1</div>
+        <Space>data</Space>
       </Panel>
     </View>
   );

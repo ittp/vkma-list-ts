@@ -7,11 +7,12 @@
   "dependencies": {
     "@types/node": "^20.8.2",
     "@types/react": "^18.2.22",
-    "@vkontakte/icons": "1.201.0",
-    "@vkontakte/vk-bridge": "2.11.2",
+    "@vkontakte/icons": "latest",
+    "@vkontakte/vk-bridge": "latest",
+    "@vkontakte/vk-bridge-react": "latest",
     "@vkontakte/vkui": "latest",
-    "axios": "1.3.4",
-    "axios-oauth-client": "^2.0.3",
+    "@vkontakte/vk-mini-apps-router": "latest",
+    "axios": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-scripts": "5.0.1"
