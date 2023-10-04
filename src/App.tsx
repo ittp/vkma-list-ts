@@ -16,6 +16,7 @@ import {
   Header,
   ButtonGroup,
   Cell,
+  Card,
   RichCell,
 } from "@vkontakte/vkui";
 
@@ -73,8 +74,9 @@ export default function App(config: any) {
   return (
     <View activePanel="profile" title={"s"}>
       <Panel id="profile" header={<PageHeader />}>
-        <div>1</div>
-        <Space>data</Space>
+        <Group>
+        
+        </Group>
       </Panel>
     </View>
   );
