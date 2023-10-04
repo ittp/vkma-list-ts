@@ -16,7 +16,7 @@ import AddTask from "./Tasks";
 
 import { DragableList } from "./DragableList";
 
-import { UserInfo } from "@vkontakte/vk-bridge";
+// import { UserInfo } from "@vkontakte/vk-bridge";
 
 import {
   RouterProvider,
@@ -33,15 +33,16 @@ const router = createHashRouter([
   },
 ]);
 
-console.log(router);
-
 const rootElement = document.getElementById("root");
 const root = ReactDOMClient.createRoot(rootElement!);
-
+import { RouterAppView } from "./RouterAppView";
 root.render(
   <StrictMode>
     <ConfigProvider>
       <AppRoot>
+        <RouterProvider router={router}>
+          <RouterAppView />
+        </RouterProvider>
         <DragableList data={["1", "2"]} />
       </AppRoot>
     </ConfigProvider>

@@ -22,6 +22,7 @@ import {
   Avatar,
   Text,
   Textarea,
+  Switch,
 } from "@vkontakte/vkui";
 
 import { Axios, AxiosHeaders, AxiosInstance, AxiosProxyConfig } from "axios";
@@ -36,8 +37,9 @@ import React, {
   useState,
   ReactNode,
 } from "react";
-export const DragableList = (data: []) => {
+export const DragableList = (data: any) => {
   const [draggingList, updateDraggingList] = React.useState(["1", "2"]);
+  const [settingsList, updateSettingsList] = React.useState([{key: "1", label: ""}, "2"]);
 
   const onDragFinish = ({ from, to }) => {
     const _list = [...draggingList];
@@ -71,6 +73,24 @@ export const DragableList = (data: []) => {
 
         <Group mode="plain">
           <Textarea />
+        </Group>
+
+        <Group header={<Header mode="secondary">Настройки</Header>}>
+          {draggingList.map((item) => (
+            <SimpleCell Component="label" after={<Switch />}>
+              <Text>{item}</Text>
+            </SimpleCell>
+          ))}
+        </Group>
+
+        <Group header={<Header mode="secondary">Настройки</Header>}>
+          <SimpleCell Component="label" after={<Switch defaultChecked />}>
+            Сжимать фотографии
+          </SimpleCell>
+
+          <SimpleCell Component="label" after={<Switch />}>
+            Сжимать видео
+          </SimpleCell>
         </Group>
       </Panel>
     </View>

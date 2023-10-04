@@ -1,27 +1,26 @@
-{
-  /* <Group>
+import { SimpleCell, Group, Button, List } from "@vkontakte/vkui";
 
-</Group> */
-}
+import { Icon28DevicesOutline } from "@vkontakte/icons";
+// let outline = {};
 
-let outline = {};
-
-let icons = {
-  devices: <Icon28DevicesOutline />,
-};
-const icon = (key) => icons.filter((icon) => icon == icon[key]);
+// let icons = {
+//   devices: <Icon28DevicesOutline />,
+// };
+// const icon = (key) => icons.filter((icon) => icon == icon[key]);
 
 // { item: { title: 'title', subtitle: 'subtitle', icon: 'users', link: 'nothing', }}
 const MenuItems = (items) =>
   items.map((item, key) => (
     <SimpleCell
       key={key}
-      onClick={() => setActivePanel(item.link)}
-      expandable
-      before={icons[item.icon]}
+      before={<Icon28DevicesOutline />}
+      after={"actions"}
+      //onClick={() => setActivePanel(item.link)}
+      expandable={"auto"}
+
+      
     >
       {item.title}
-      if(item.subtitle) {}
     </SimpleCell>
   ));
 

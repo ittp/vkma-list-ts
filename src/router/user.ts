@@ -1,3 +1,1 @@
-export { UserInfo } from "@vkontakte/vk-bridge";
-
-
+export default {};

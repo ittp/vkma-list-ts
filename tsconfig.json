@@ -1,18 +1,18 @@
 {
   "include": ["./src/**/*"],
   "compileOnSave": true,
-  "watchOptions": {},
+  "watchOptions": {
+    "excludeDirectories": ["./src/*"]
+  },
 
   "compilerOptions": {
     "strict": true,
-    "importHelpers": true,
-    "moduleResolution": "NodeNext",
-    "reactNamespace": "React",
     "esModuleInterop": true,
+    "moduleResolution": "nodenext",
     "allowJs": true,
-    "incremental": true,
     "noImplicitAny": false,
-    "lib": ["dom", "ES5"],
+    "target": "ESNext",
+    "lib": ["dom", "ESNext"],
     "jsx": "react-jsx"
   }
 }

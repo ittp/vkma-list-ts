@@ -3,7 +3,7 @@ import {
   Icon16CommentOutline,
   Icon16Ghost,
   Icon16ListPlayOutline,
-  Icon28DevicesOutline,
+  Icon28DevicesOutline
 } from "@vkontakte/icons";
 
 import {
