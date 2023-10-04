@@ -4,19 +4,28 @@ import { ConfigProvider, AppRoot, Header } from "@vkontakte/vkui";
 import "@vkontakte/vkui/dist/vkui.css";
 
 import App from "./App";
+
 import { DragableList } from "./DragableList";
+
+import { UserInfo } from "@vkontakte/vk-bridge";
+
+import {
+  RouterProvider,
+  createHashRouter,
+} from "@vkontakte/vk-mini-apps-router";
+
+import { useApperance } from "@vkontakte/vk-bridge-react";
 const rootElement = document.getElementById("root");
 const root = ReactDOMClient.createRoot(rootElement!);
+console.log(UserInfo);
+
+import { useParams } from "@vkontake/vk-mini-apps-router";
 
 root.render(
   <StrictMode>
-    <ConfigProvider platform={"android"}>
+    <ConfigProvider>
       <AppRoot>
-        <Header>Header</Header>
         <DragableList data={["1", "2"]} />
-
-
-        <Group></Group>
       </AppRoot>
     </ConfigProvider>
   </StrictMode>,

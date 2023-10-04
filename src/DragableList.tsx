@@ -20,6 +20,8 @@ import {
   RichCell,
   List,
   Avatar,
+  Text,
+  Textarea,
 } from "@vkontakte/vkui";
 
 import { Axios, AxiosHeaders, AxiosInstance, AxiosProxyConfig } from "axios";
@@ -48,6 +50,8 @@ export const DragableList = (data: []) => {
 
   return (
     <View activePanel="list">
+
+      
       <Panel id="list">
         <PanelHeader>List</PanelHeader>
         <Group>
@@ -55,14 +59,20 @@ export const DragableList = (data: []) => {
             {draggingList.map((item) => (
               <Cell
                 key={item}
-                before={<Avatar/>}
+                //before={<Avatar/>}
                 draggable
                 onDragFinish={onDragFinish}
+                expandable
+                after={"n"}
               >
-                {item}
+                <Text>{item}</Text>
               </Cell>
             ))}
           </List>
+        </Group>
+
+        <Group mode="plain">
+          <Textarea />
         </Group>
       </Panel>
     </View>

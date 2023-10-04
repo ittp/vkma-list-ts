@@ -2,8 +2,6 @@
   "include": ["./src/**/*"],
   "compileOnSave": true,
 
-  "references": [""],
-  "ts-node": {},
   "compilerOptions": {
     "strict": true,
     "module": "ESNext",

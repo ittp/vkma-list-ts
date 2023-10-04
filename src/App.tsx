@@ -64,6 +64,20 @@ function PageHeader() {
     </Header>
   );
 }
+
+// export default function TaskList() {
+//   const tasks = useTasks();
+//   return (
+//     <Group>
+//       {tasks.map((task) => (
+//         <li key={task.id}>
+//           <Task task={task} />
+//         </li>
+//       ))}
+//     </Group>
+//   );
+// }
+
 export default function App(config: any) {
   let [store, setStore] = useState(config);
 
