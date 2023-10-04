@@ -50,8 +50,6 @@ export const DragableList = (data: []) => {
 
   return (
     <View activePanel="list">
-
-      
       <Panel id="list">
         <PanelHeader>List</PanelHeader>
         <Group>
@@ -62,7 +60,7 @@ export const DragableList = (data: []) => {
                 //before={<Avatar/>}
                 draggable
                 onDragFinish={onDragFinish}
-                expandable
+                expandable={"auto"}
                 after={"n"}
               >
                 <Text>{item}</Text>

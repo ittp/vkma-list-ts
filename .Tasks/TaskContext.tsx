@@ -1,4 +1,4 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useReducer, Component } from "react";
 
 const TasksContext = createContext(null);
 
@@ -59,3 +59,5 @@ const initialTasks = [
   { id: 1, text: "Visit the temple", done: false },
   { id: 2, text: "Drink matcha", done: false },
 ];
+
+

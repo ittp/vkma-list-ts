@@ -5,6 +5,7 @@ import {
   Icon16ListPlayOutline,
   Icon28DevicesOutline,
 } from "@vkontakte/icons";
+
 import {
   Group,
   Panel,
@@ -87,10 +88,8 @@ export default function App(config: any) {
 
   return (
     <View activePanel="profile" title={"s"}>
-      <Panel id="profile" header={<PageHeader />}>
-        <Group>
-        
-        </Group>
+      <Panel id="profile">
+        <Group>da</Group>
       </Panel>
     </View>
   );
